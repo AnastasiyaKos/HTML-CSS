@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Барбершоп "Бородинский"</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="main-header">
@@ -68,8 +69,8 @@
             <h2>Фотогалерея</h2>
             <figure class="gallery-content">
                 <a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
-                <span class="button gallery-button gallery-button-back">Назад</span>
-                <span class="button gallery-button gallery-button-next">Вперед</span>
+                <button class="button gallery-button gallery-button-back">Назад</button>
+                <button class="button gallery-button gallery-button-next">Вперед</button>
             </figure>
         </section>
 
@@ -93,7 +94,28 @@
             <h2>Записаться</h2>
             <p class="appoint-info">Укажите время и дату и мы свяжемся с вами для
             подтверждения брони</p>
-            <!-- Здесь будет форма -->
+            <form class="appointment-form" method="get"
+                  action="https://echo.htmlacademy.ru">
+                <p class="appointment-form">
+                    <label for="appointment-data">Дата</label>
+                    <input id="appointment-data" type="text" name="date" value="" placeholder="08.06.2019">
+                </p>
+                <p class="appointment-form">
+                    <label for="appointment-time">Время</label>
+                    <input id="appointment-time" type="text" name="time" value="" placeholder="10:00">
+                </p>
+                <p class="appointment-form">
+                    <label for="appointment-name">Ваше имя</label>
+                    <input id="appointment-name" type="text" name="name" value="" placeholder="Борода">
+                </p>
+                <p class="appointment-form">
+                    <label for="appointment-phone">Телефон</label>
+                    <input id="appointment-phone" type="tel" name="phone" value="" placeholder="+375 33 564 78 95">
+                </p>
+                <button class="button" type="submit">
+                    Отправить
+                </button>
+            </form>
         </section>
     </main>
     <footer class="main-footer">
@@ -116,13 +138,35 @@
     <section class="modal modal-login">
         <h2>Личный кабинет</h2>
         <p>Введите свой логин и пароль.</p>
-        <!-- Здесь будет форма -->
-        <span class="modal-close">x</span>
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+            <p>
+                <label class="visually-hidden" for="user-login">Логин</label>
+                <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Логин">
+            </p>
+            <p>
+                <label class="visually-hidden" for="user-password">Пароль</label>
+                <input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Пароль">
+            </p>
+            <p class="login-password-info">
+                <label class="login-checkbox">
+                    <input type="checkbox" name="remember" class="visually-hidden">
+                    <span class="checkbox-indicator"></span>
+                    Запомните меня
+                </label>
+                <a class="restore" href="#">Я забыл пароль!</a>
+            </p>
+            <button class="button" type="submit">Войти</button>
+        </form>
+        <button class="modal-close" type="button">Закрыть</button>
     </section>
 
     <section class="modal modal-map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
-        <span class="modal-close">x</span>
+        <p>
+            <img src="img/map.jpg" width="780" height="560" alt="Офис компании по адресу
+                ул.Большевская Конюшенная 19/8, Санкт-Петербург">
+        </p>
+        <button class="modal-close" type="button">Закрыть</button>
     </section>
 </body>
 </html>
