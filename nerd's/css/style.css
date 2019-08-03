@@ -7,22 +7,37 @@ body {
     line-height: 24px;
     color: #283136;
 
-    background-color: #eeeeee;
+    background-color: #ffffff;
 }
 
 a {
     text-decoration: none;
 }
 
-.button {
+.button,
+.social-item a {
     font: inherit;
+
+    text-align: center;
     font-size: 16px;
     line-height: 18px;
     color: #ffffff;
 
     background-color: #fb565a;
     text-transform: uppercase;
+    border: none;
+}
 
+.button:hover,
+.social-item a:hover {
+    background-color: #e74246;
+}
+
+.button:focus,
+.social-item a:focus{
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: #d7373b;
 }
 
 .button:hover {
@@ -35,10 +50,38 @@ a {
     background-color: #d7373b;
 }
 
+.apps .button {
+    background-color: #00ca74;
+}
+
+.apps .button:hover {
+    background-color: #00bc6c;
+}
+
+.apps .button:focus {
+    background-color: #00aa62;
+}
+
+.presentation .button {
+    background-color: #efc84a;
+}
+
+.presentation .button:hover {
+    background-color: #eab534;
+}
+
+.presentation .button:focus {
+    background-color: #e5a722;
+}
+
 .container {
     font: inherit;
 
     background-color: #ffffff;
+}
+
+header {
+    background-color: #eeeeee;
 }
 
 .mane-navigation {
@@ -77,6 +120,114 @@ a {
     line-height: 55px;
     color: black;
 }
+
+.container h3 {
+    color: black;
+
+    text-transform: uppercase;
+}
+
+.info b {
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 700;
+    color: black;
+}
+
+.advantages b {
+    font-size: 16px;
+    line-height: 24px;
+
+    text-transform: uppercase;
+}
+
+.list-order,
+.brands,
+.social-item{
+    list-style: none;
+}
+
+.percent {
+    font-size: 45px;
+    line-height: 10px;
+    font-weight: 700;
+    color: black;
+}
+
+.brands a {
+    filter: alpha(Opacity=20);
+    opacity: 0.2;
+}
+
+.brands a:hover {
+    filter: alpha(Opacity=100);
+    opacity: 1;
+}
+
+.brands a:focus {
+    filter: alpha(Opacity=10);
+    opacity: 0.1;
+}
+
+.footer-contacts p:nth-child(2){
+    font-weight: 700;
+    color: black;
+
+    text-transform: uppercase;
+}
+
+.footer-social b{
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+    color: black;
+}
+
+.footer-social .social-button {
+    font: inherit;
+    color: black;
+}
+
+.footer-social a {
+    color: black;
+    background-color: #e1e1e1;
+}
+
+label {
+    font-weight: 700;
+    color: black;
+}
+
+.latter-form input {
+    background-color: transparent;
+    border: 2px solid #e4e8e9;
+    outline: none;
+}
+
+.latter-form input:hover {
+    border-color: #cdd0d2;
+    outline: none;
+}
+
+.latter-form input:focus {
+    border-color: #000000;
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

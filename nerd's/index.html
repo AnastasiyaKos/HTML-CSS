@@ -69,19 +69,19 @@
         <h2 class="visually-hidden">Услуги</h2>
         <section class="veb-site">
             <img src="img/web-site.jpg" width="300" height="146" alt="">
-            <h3>ВЕБ-САЙТЫ</h3>
+            <h3>Веб-сайты</h3>
             <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
             <a class="button" href="#">Заказать</a>
         </section>
         <section class="apps">
             <img src="img/apps.jpg" width="300" height="146" alt="">
-            <h3>ПРИЛОЖЕНИЯ</h3>
+            <h3>Приложения</h3>
             <p>Покорите топ-10 приложений в AppStore и Google Play</p>
             <a class="button" href="#">Заказать</a>
         </section>
         <section class="presentation">
             <img src="img/presentation.jpg" width="300" height="146" alt="">
-            <h3>ПРЕЗЕНТАЦИИ</h3>
+            <h3>Презентаци</h3>
             <p>Вы даже не представляете, насколько вы изумительны!</p>
             <a class="button" href="#">Заказать</a>
         </section>
@@ -89,24 +89,24 @@
 
     <section class="info">
         <h2 class="visually-hidden">Немного информации о нас</h2>
-        <p>Мы - маленькая, но гордая<br>
-            дизайн-студия из Краснодара.</p>
+        <b>Мы - маленькая, но гордая<br>
+            дизайн-студия из Краснодара.</b>
         <p>Исповедуем принципы минимализма из чистоты. Ставим математический
         расчет выше креатива. Работаем не покладаяя рук, как работы</p>
 
         <div class="advantages">
-            <b>ВЫПОЛНЯЕМ ЗАКАЗЫ НА РАЗРАБОТКУ:</b>
+            <b>Выполняем заказы на разработку:</b>
             <ul class="list-order">
                 <li class="order-1">Веб-сайтов любой сложности</li>
                 <li class="order-2">Мобильный приложений для iOS и Android</li>
                 <li class="order-3">Слайдшоу и видео одля корпоративных презентаций</li>
             </ul>
         </div>
-        <div>
+        <div class="advantages">
             <img src="img/nerds-illustration.jpg" width="360" height="208" alt="nerds">
             <b>С 2004 года любим точность во всем:</b>
             <table>
-                <tr>
+                <tr class="percent">
                     <td>146%</td>
                     <td>100%</td>
                     <td>50%</td>
@@ -146,15 +146,16 @@
     </section>
 
     <footer class="main-footer">
-        <section class="modal modal-map">
+        <section class="map">
             <h2 class="visually-hidden">Как до нас добраться</h2>
             <img src="img/map.jpg">
-            <!-- <span class="modal-close">x</span> -->
         </section>
         <div class="footer-contacts">
-            <h2>>Контактная информация</h2>
+            <h2>Контактная информация</h2>
             <p>
-                NЁRDS DESIGN STUDIO<br>
+                NЁRDS DESIGN STUDIO
+            </p>
+            <p>
                 350000, Санк-Петербург,<br>
                 ул. Головатого, д. 100
             </p>
@@ -162,14 +163,34 @@
             <a class="button" href="#">Напишите нам</a>
         </div>
         <div class="footer-social">
-            <ul>
-                <li><a class="social-button" href="https://vk.com/" aria-label="Вконтакте"></a></li>
-                <li><a class="social-button" href="https://www.facebook.com/" aria-label="Фейсбук"></a></li>
-                <li><a class="social-button" href="https://www.instagram.com/?hl=ru" aria-label="Инстаграм"></a></li>
+            <ul class="social-item">
+                <li><a class="social-button" href="https://vk.com/" aria-label="Вконтакте">Вконтакте</a></li>
+                <li><a class="social-button" href="https://www.facebook.com/" aria-label="Фейсбук">Фейсбук</a></li>
+                <li><a class="social-button" href="https://www.instagram.com/?hl=ru" aria-label="Инстаграм">Инстаграм</a></li>
             </ul>
             <b>Давайте дружить, это выгодно!</b>
-            <b>Скидка 10% для друзей из социальных сетей.</b>
+            <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
     </footer>
+
+    <section class="modal modal-login">
+        <h2 class="visually-hidden">Личный кабинет</h2>
+        <form class="latter-form" action="https://echo.htmlacademy.ru" method="post">
+            <p>
+                <label for="user-name">Ваше имя:</label>
+                <input id="user-name" class="name-icon-user" type="text" name="name" placeholder="Имя Фамилия">
+            </p>
+            <p>
+                <label for="user-email">Ваш e-mail:</label>
+                <input id="user-email" class="email-icon-user" type="text" name="email" placeholder="email@example.com">
+            </p>
+            <p>
+                <label for="latter">Техт письма:</label>
+                <input id="latter" class="latter-icon-user" type="text" placeholder="В свободной форме">
+            </p>
+            <button class="button" type="submit">Отправить</button>
+        </form>
+        <button class="modal-close" type="button">Закрыть</button>
+    </section>
 </body>
 </html>
