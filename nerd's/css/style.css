@@ -14,11 +14,22 @@ a {
     text-decoration: none;
 }
 
+h1 {
+    font-size: 55px;
+    line-height: 55px;
+    color: #000000;
+}
+
+ul {
+    list-style: none;
+}
+
 .button,
 .social-item a {
     font: inherit;
 
     text-align: center;
+
     font-size: 16px;
     line-height: 18px;
     color: #ffffff;
@@ -26,6 +37,11 @@ a {
     background-color: #fb565a;
     text-transform: uppercase;
     border: none;
+}
+
+.description .button {
+    width: 240px;
+    height: 50px;
 }
 
 .button:hover,
@@ -74,6 +90,102 @@ a {
     background-color: #e5a722;
 }
 
+.filter label {
+    font-size: 16px;
+    line-height: 20px;
+    color: #283136;
+}
+
+.filter label:hover {
+    color: #000000;
+}
+
+.filter label:focus {
+    opacity: 0.3;
+}
+
+.filter fieldset {
+    border: none;
+}
+
+.filter legend {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000000;
+
+    text-transform: uppercase;
+}
+
+input[type='number'] {
+    width: 80px;
+    height: 38px;
+    text-align: center;
+
+    background-color: #eeeeee;
+    border: none;
+}
+
+.filter button[type="submit"] {
+    width: 260px;
+    height: 50px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #000000;
+    text-align: center;
+    border: none;
+
+    text-transform: uppercase;
+    background-color: #eeeeee;
+}
+
+.filter button[type="submit"]:hover {
+    background-color: #dfdfdf;
+}
+
+.filter button[type="submit"]:focus,
+.filter button[type="submit"]:active {
+    opacity: 0.3;
+    background-color: #787878;
+    box-shadow: inset 0 4px 0 0 rgb(0,0,75);
+}
+
+
+.price-for-to {
+    line-height: 22px;
+
+    text-transform: uppercase;
+}
+
+.filters h2{
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #000000;
+
+    text-transform: uppercase;
+}
+
+.filters-details a {
+    font-size: 14px;
+    line-height: 18px;
+    list-style: none;
+    color: #000000;
+
+    opacity: 0.3;
+    text-transform: uppercase;
+}
+
+.filters-details a:hover {
+    opacity: 0.6;
+}
+
+.filters-details a:focus,
+.filters-details a:active {
+    opacity: 1;
+}
+
+
 .container {
     font: inherit;
 
@@ -84,7 +196,7 @@ header {
     background-color: #eeeeee;
 }
 
-.mane-navigation {
+.main-navigation {
     font-size: 16px;
     line-height: 30px;
     color: #000000;
@@ -115,6 +227,10 @@ header {
     text-decoration: underline;
 }
 
+.site-navigation-current a {
+    text-decoration: underline;
+}
+
 .slides b {
     font-size: 55px;
     line-height: 55px;
@@ -128,23 +244,30 @@ header {
 }
 
 .info b {
-    font-size: 55px;
-    line-height: 55px;
+    font-size: 45px;
+    line-height: 45px;
     font-weight: 700;
     color: black;
 }
 
-.advantages b {
+.advantages p {
     font-size: 16px;
     line-height: 24px;
+    font-weight: 700;
+    color: black;
 
     text-transform: uppercase;
 }
 
 .list-order,
-.brands,
+.brand-item,
 .social-item{
     list-style: none;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
 }
 
 .percent {
@@ -193,7 +316,7 @@ header {
     background-color: #e1e1e1;
 }
 
-label {
+.latter-form label {
     font-weight: 700;
     color: black;
 }
@@ -214,19 +337,130 @@ label {
     outline: none;
 }
 
+.invalid {
+    border-color: #e74246;
+}
+
+.visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
 
+/* сетка */
 
+html,
+body {
+    min-height: 2746px;
+    min-width: 1200px;
+}
 
+/*body {*/
+/*    background-image: url("../img/nerds-index.jpg");*/
+/*    background-size: 1375px;*/
+/*    background-repeat: no-repeat;*/
+/*}*/
 
+.container {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0 10px;
 
+}
 
+.main-header {
+    padding-top: 50px;
+    margin-bottom: 80px;
 
+    /* */
+    min-height: 550px;
+}
 
+.main-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    background-color: transparent;
+}
 
+.main-navigation-wrapper {
+    width: 100%;
+    margin-bottom: 20px;
 
+    background-color: #eeeeee;
+}
 
+.main-navigation-wrapper .container {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #eeeeee;
+
+}
+
+.main-header .container {
+
+    background-color: #eeeeee;
+}
+
+.slides {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 380px;
+    padding-top: 65px;
+    padding-bottom: 80px;
+}
+
+.products {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.products section {
+    margin-right: 100px;
+}
+
+.information .container {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 45px;
+}
+
+.container .info {
+    width: 660px;
+}
+
+.container .advantages {
+    width: 360px;
+}
+
+.information {
+    margin-bottom: 120px;
+}
+
+.brand-list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
 
 
 

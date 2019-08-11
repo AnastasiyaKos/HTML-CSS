@@ -8,28 +8,35 @@
 </head>
 <body>
     <header class="main-header">
-        <a class="main-header-logo">
-            <img src="img/index-logo.svg" width="360" height="153" alt="Логотип барбершопа 'Бородинский'">
-        </a>
+
         <nav class="main-navigation">
-            <ul class="site-navigation">
-                <li><a href="info.html">Информация</a></li>
-                <li><a href="name.html">Новости</a></li>
-                <li><a href="price.html">Прайс-лист</a></li>
-                <li><a href="catalog.html">Магазин</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-            <ul class="user-navigation">
-                <li class="login-link">Вход</li>
-            </ul>
+            <a class="main-header-logo">
+                <img src="img/index-logo.svg" width="360" height="153" alt="Логотип барбершопа 'Бородинский'">
+            </a>
+            <div class="main-navigation-wrapper">
+                <div class="container">
+                    <ul class="site-navigation">
+                        <li><a href="info.html">Информация</a></li>
+                        <li><a href="name.html">Новости</a></li>
+                        <li><a href="price.html">Прайс-лист</a></li>
+                        <li><a href="catalog.html">Магазин</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                    <ul class="user-navigation">
+                        <li class="login-link">Вход</li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
+
+
     <main class="container">
 
-        <h1 class="visually-hidden">Барбершоп "Бородинский"</h1>
+<!--        <h1 class="visually-hidden">Барбершоп "Бородинский"</h1>-->
 
         <section class="features">
-            <h2 class="visually-hidden">Приемущества</h2>
+<!--            <h2 class="visually-hidden">Приемущества</h2>-->
             <ul class="features-list">
                 <li class="feature-item">
                     <h3>Быстро</h3>
@@ -70,9 +77,9 @@
                 <h2>Фотогалерея</h2>
                 <figure class="gallery-content">
                     <a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
-                    <button class="button gallery-button gallery-button-back">Назад</button>
-                    <button class="button gallery-button gallery-button-next">Вперед</button>
                 </figure>
+                <button class="button gallery-button gallery-button-back">Назад</button>
+                <button class="button gallery-button gallery-button-next">Вперед</button>
             </section>
         </div>
 
@@ -123,22 +130,24 @@
         </div>
     </main>
     <footer class="main-footer">
-        <p class="footer-contacts">
-            Барбершоп "Бородинский"<br>
-            <a href="#">Как нас найти?</a><br>
-            Телефон: +7 (822) 666-62-54
-        </p>
-        <div class="footer-social">
-            <b>Давайте дружить</b>
-            <ul>
-                <li><a class="social-button" href="#">Вконтакте</a></li>
-                <li><a class="social-button" href="#">Фейсбук</a></li>
-                <li><a class="social-button" href="#">Инстаграм</a></li>
-            </ul>
-        </div>
-        <div class="footer-copyright">
-            <b>Разратобано:</b>
-            <a class="button" href="http://htmlacademy.ru">HTML Academy</a>
+        <div class="container">
+            <p class="footer-contacts">
+                Барбершоп "Бородинский"<br>
+                <a href="#">Как нас найти?</a><br>
+                Телефон: +7 (822) 666-62-54
+            </p>
+            <div class="footer-social">
+                <b>Давайте дружить</b>
+                <ul>
+                    <li><a class="social-button" href="#">Вконтакте</a></li>
+                    <li><a class="social-button" href="#">Фейсбук</a></li>
+                    <li><a class="social-button" href="#">Инстаграм</a></li>
+                </ul>
+            </div>
+            <div class="footer-copyright">
+                <b>Разратобано:</b>
+                <a class="button" href="http://htmlacademy.ru">HTML Academy</a>
+            </div>
         </div>
     </footer>
 
