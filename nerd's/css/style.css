@@ -209,11 +209,15 @@ header {
 
 .site-navigation,
 .basket {
+    padding: 0;
+    margin: 0;
     list-style: none;
 }
 
 .site-navigation a,
 .basket a{
+    display: block;
+    padding: 25px 20px;
     font-weight: 700;
     color: #000000;
 }
@@ -234,6 +238,28 @@ header {
     text-decoration: underline;
 }
 
+.basket .basket-link {
+    position: relative;
+    padding-left: 85px;
+}
+
+.basket-link::before {
+    content: "";
+
+    position: absolute;
+    top: 32px;
+    left: 55px;
+    width: 60px;
+    height: 90px;
+
+
+    background-image: url("../img/cart-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    opacity: 0.3;
+}
+
 .slide-title {
     font-size: 55px;
     line-height: 55px;
@@ -251,6 +277,10 @@ header {
     line-height: 45px;
     font-weight: 700;
     color: black;
+}
+
+.info {
+    padding-top: 30px;
 }
 
 .advantages p {
@@ -406,12 +436,15 @@ body {
 }
 
 .main-header-logo {
-    margin-right: 200px;
+    margin-right: 140px;
 }
 
 .site-navigation {
-    padding: 0;
-    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 560px;
+    padding-right: 60px;
+    padding-left: 60px;
 }
 
 .main-header .container {
@@ -419,9 +452,6 @@ body {
 }
 
 .basket {
-    padding: 0;
-    margin: 0;
-
     margin-left: auto;
 }
 
@@ -526,7 +556,6 @@ body {
 .products {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 80px;
 }
 
 .products section {
@@ -542,27 +571,69 @@ body {
 
 .container .info {
     width: 660px;
+    margin: 0;
+}
+
+.info p {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.advantages ul {
+    margin: 0;
 }
 
 .container .advantages {
     width: 360px;
 }
 
+.info .advantages {
+    width: 460px;
+}
+
 .information {
-    margin-bottom: 120px;
+    margin-bottom: 75px;
+}
+
+.brands {
+
 }
 
 .brand-list {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 120px;
+    margin-top: 0;
+    margin-bottom: 80px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    background-image: url("../img/divide.png"),
+                      url("../img/divide.png");
+    background-position: top, bottom;
+    background-repeat: no-repeat;
 }
 
 .brand-item {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 260px;
+
+    width: 280px;
+}
+
+.brand-item:nth-child(2),
+.brand-item:nth-child(3) {
+    width: 300px;
+
+    background-image: url("../img/div.png"),
+                      url("../img/div.png");
+    background-position: left, right;
+    background-repeat: no-repeat;
+}
+
+.brand-item:nth-child(3) {
+    background-image: url("../img/div.png");
+    background-position: right;
+    background-repeat: no-repeat;
 }
 
 .footer-social {
@@ -654,7 +725,11 @@ h1 {
 }
 
 .main-container {
-    margin-bottom: 60px;
+
+    padding-bottom: 80px;
+    background-image: url("../img/divide.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
 }
 
 
