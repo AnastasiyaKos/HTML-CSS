@@ -133,22 +133,70 @@
                     <h2 class="visually-hidden">Список готовых шаблонов</h2>
                     <ul class="catalog-list">
                         <li class="catalog-item">
-                            <img src="img/img-sedona.jpg" alt="Седона" width="360" height="576">
+                            ::before
+                            <a href="#" class="catalog-link">
+                                <img class="catalog-item-image" src="img/img-sedona.jpg" alt="Sedona" width="360" height="576">
+                            </a>
+                            <div class="item-info">
+                                <h3>Sedona</h3>
+                                <p>Информационный сайт для туристов</p>
+                                <a href="#" class="button button-buy">9 900p.</a>
+                            </div>
                         </li>
                         <li class="catalog-item">
-                            <img src="img/img-pink.jpg" alt="Pink" width="360" height="576">
+                            ::before
+                            <a href="#" class="catalog-link">
+                                <img src="img/img-pink.jpg" alt="Pink" width="360" height="576">
+                            </a>
+                            <div class="item-info">
+                                <h3>Pink App</h3>
+                                <p>Продуктовый лендинг приложения для IOS и Android</p>
+                                <a href="#" class="button button-buy">9 900p.</a>
+                            </div>
                         </li>
                         <li class="catalog-item">
-                            <img src="img/img-barbershop.jpg" alt="Barbershop" width="360" height="576">
+                            ::before
+                            <a href="#" class="catalog-link">
+                                <img src="img/img-barbershop.jpg" alt="Barbershop" width="360" height="576">
+                            </a>
+                            <div class="item-info">
+                                <h3>Barbershop</h3>
+                                <p>Сайт салон красоты. Для мужчин, да.</p>
+                                <a href="#" class="button button-buy">9 900p.</a>
+                            </div>
                         </li>
                         <li class="catalog-item">
-                            <img src="img/img-mishka.jpg" alt="Mishka" width="360" height="576">
+                            ::before
+                            <a href="#" class="catalog-link">
+                                <img src="img/img-mishka.jpg" alt="Mishka" width="360" height="576">
+                            </a>
+                            <div class="item-info">
+                                <h3>Mishka</h3>
+                                <p>Интернет магазин вязаных игрушек.</p>
+                                <a href="#" class="button button-buy">9 900p.</a>
+                            </div>
                         </li>
                         <li class="catalog-item">
-                            <img src="img/img-aplus.jpg" alt="Aplus" width="360" height="576">
+                            ::before
+                            <a href="#" class="catalog-link">
+                                <img src="img/img-aplus.jpg" alt="Aplus" width="360" height="576">
+                            </a>
+                            <div class="item-info">
+                                <h3>A Plus</h3>
+                                <p>Лендинг повышения курсов квалификации.</p>
+                                <a href="#" class="button button-buy">9 900p.</a>
+                            </div>
                         </li>
                         <li class="catalog-item">
-                            <img src="img/img-kvast.jpg" alt="Kvast" width="360" height="576">
+                            ::before
+                            <a href="#" class="catalog-link">
+                                <img src="img/img-kvast.jpg" alt="Kvast" width="360" height="576">
+                            </a>
+                            <div class="item-info">
+                                <h3>Кваст</h3>
+                                <p>Промо-сайт производителя крафтового кваса.</p>
+                                <a href="#" class="button button-buy">9 900p.</a>
+                            </div>
                         </li>
                     </ul>
                     <ul class="pagination-list">
@@ -208,7 +256,7 @@
 
     <section class="modal modal-login">
         <h2>Напишите нам</h2>
-        <form class="latter-form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="letter-form" action="https://echo.htmlacademy.ru" method="post">
             <p>
                 <label for="user-name">Ваше имя:</label>
                 <input id="user-name" class="name-icon-user" type="text" name="name" placeholder="Имя Фамилия">
@@ -218,8 +266,8 @@
                 <input id="user-email" class="email-icon-user" type="text" name="email" placeholder="email@example.com">
             </p>
             <p>
-                <label for="latter">Техт письма:</label>
-                <input id="latter" class="latter-icon-user" type="text" placeholder="В свободной форме">
+                <label for="letter">Текст письма:</label>
+                <textarea id="letter" class="letter-icon-user" placeholder="В свободной форме"></textarea>
             </p>
             <button class="button" type="submit">Отправить</button>
         </form>

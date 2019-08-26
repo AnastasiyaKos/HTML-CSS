@@ -461,12 +461,12 @@ input[type='number'] {
 }
 
 .modal {
-    margin: 0 240px;
+    margin: 0 240px 50px;
     padding: 60px 100px 85px 100px;
     width: 760px;
 
     background-color: #ffffff;
-    border: 1px solid red;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.6);;
 }
 
 .modal h2 {
@@ -484,33 +484,41 @@ input[type='number'] {
     justify-content: space-between;
 }
 
-.latter-form input {
+.letter-form textarea {
+    font-family: "Roboto", "Verdana", sans-serif;
+    box-sizing: border-box;
+}
+
+.letter-form input,
+.letter-form textarea {
     margin-bottom: 35px;
-    padding: 14px 7px;
+    padding: 13px;
     background-color: transparent;
     border: 2px solid #e4e8e9;
     border-radius: 3px;
     outline: none;
 }
 
-.latter-form input:hover {
+.letter-form input:hover,
+.letter-form textarea:hover {
     border-color: #cdd0d2;
     outline: none;
 }
 
-.latter-form input:focus {
+.letter-form input:focus,
+.letter-form textarea:focus {
     border-color: #000000;
     outline: none;
 }
 
-.latter-form p {
+.letter-form p {
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0;
 }
 
-.latter-form label {
+.letter-form label {
      margin-bottom: 10px;
      line-height: 18px;
      font-weight: 700;
@@ -519,22 +527,24 @@ input[type='number'] {
 
 .name-icon-user,
 .email-icon-user {
-    width: 360px;
+    width: 334px;
     height: 36px;
 }
 
-form .latter-icon-user {
+form .letter-icon-user {
     margin-bottom: 45px;
     width: 760px;
     min-height: 120px;
 }
 
-input[type='text'] {
+input[type='text'],
+textarea {
+    font-family: "Roboto", "Verdana", sans-serif;
     font-size: 16px;
     line-height: 18px;
 }
 
-.latter-form .button {
+.letter-form .button {
     padding: 15px 80px;
 }
 
