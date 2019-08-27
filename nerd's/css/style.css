@@ -233,6 +233,7 @@ input[type='number'] {
 
 .filters-details {
     display: flex;
+    margin-right: 25px;
 }
 
 .filters-details a {
@@ -245,7 +246,6 @@ input[type='number'] {
     opacity: 0.3;
     text-transform: uppercase;
 }
-
 
 .filters-details a:hover {
     opacity: 0.6;
@@ -265,26 +265,39 @@ input[type='number'] {
 }
 
 
+.filters-sort-order .filters-sort-descending,
 .filters-sort-order .filters-sort-ascending {
     position: relative;
-    border: 1px solid greenyellow;
 }
 
+.filters-sort-descending::before,
 .filters-sort-ascending::before {
     content: "";
 
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 7px;
+    left: -42px;
 
     width: 11px;
     height: 10px;
-    border: 1px solid greenyellow;
 
     background-image: url("../img/icon-down-dir.png");
     background-repeat: no-repeat;
     background-position: 0 0;
 
+    opacity: 0.3;
+}
+
+.filters-sort-ascending::before {
+    left: -12px;
+    background-image: url("../img/icon-up-dir.svg");
+}
+
+.filters-sort-order .filters-sort-current.filters-sort-descending::before {
+    opacity: 1;
+}
+
+.filters-sort-order .filters-sort-current.filters-sort-ascending::before {
     opacity: 1;
 }
 
