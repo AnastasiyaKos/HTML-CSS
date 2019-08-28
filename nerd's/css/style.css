@@ -141,6 +141,16 @@ ul {
     background-color: #e5a722;
 }
 
+fieldset {
+    margin-bottom: 35px;
+    padding: 0;
+}
+
+fieldset ul {
+    margin: 0;
+    padding: 0;
+}
+
 .filter {
     width: 260px;
 }
@@ -155,15 +165,7 @@ ul {
     margin-right: auto;
 }
 
-.filter label {
-    font-size: 16px;
-    line-height: 20px;
-    color: #283136;
-}
 
-.filter label:hover {
-    color: #000000;
-}
 
 .filter label:focus {
     opacity: 0.3;
@@ -174,6 +176,7 @@ ul {
 }
 
 .filter legend {
+    margin-bottom: 25px;
     font-size: 18px;
     line-height: 30px;
     font-weight: 700;
@@ -190,6 +193,7 @@ input[type='number'] {
     background-color: #eeeeee;
     border: none;
 }
+
 
 .filter button[type="submit"] {
     width: 260px;
@@ -229,6 +233,62 @@ input[type='number'] {
     color: #000000;
 
     text-transform: uppercase;
+}
+
+.filter-grid ul {
+    margin: 0;
+    padding: 0;
+}
+
+.filter-grid li {
+    margin-bottom: 15px;
+    margin-left: 35px;
+}
+
+.radio {
+    position: relative;
+}
+
+.radio::before {
+    content: "";
+
+    position: absolute;
+    top: -3px;
+    left: -35px;
+    width: 25px;
+    height: 25px;
+
+    background-image: url("../img/radio-off.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    opacity: 0.3;
+}
+
+input:checked + .radio::before {
+    content: "";
+
+    position: absolute;
+    top: -3px;
+    left: -35px;
+    width: 25px;
+    height: 25px;
+
+    background-image: url("../img/radio-on.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.filter label {
+    font-size: 16px;
+    line-height: 20px;
+    color: #283136;
+}
+
+.filter label:hover,
+.radio:hover::before{
+    color: #000000;
+    opacity: 1;
 }
 
 .filters-details {
