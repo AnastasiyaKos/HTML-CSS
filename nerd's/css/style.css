@@ -11,7 +11,7 @@ body {
 }
 html,
 body {
-    min-height: 2746px;
+    /*min-height: 2746px;*/
     min-width: 1220px;
 }
 
@@ -240,12 +240,14 @@ input[type='number'] {
     padding: 0;
 }
 
-.filter-grid li {
+.filter-grid li,
+.filter-features li{
     margin-bottom: 15px;
     margin-left: 35px;
 }
 
-.radio {
+.radio,
+.checkbox {
     position: relative;
 }
 
@@ -275,6 +277,36 @@ input:checked + .radio::before {
     height: 25px;
 
     background-image: url("../img/radio-on.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.checkbox::before {
+    content: "";
+
+    position: absolute;
+    top: -3px;
+    left: -35px;
+    width: 23px;
+    height: 23px;
+
+    background-image: url("../img/checkbox-off.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    opacity: 0.3;
+}
+
+input:checked + .checkbox::before {
+    content: "";
+
+    position: absolute;
+    top: -3px;
+    left: -35px;
+    width: 27px;
+    height: 23px;
+
+    background-image: url("../img/checkbox-on.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
 }
@@ -444,7 +476,7 @@ input:checked + .radio::before {
 
 .basket .basket-link {
     position: relative;
-    padding-left: 85px;
+    padding: 25px 0 0 85px;
 }
 
 .basket-link::before {
@@ -493,171 +525,6 @@ input:checked + .radio::before {
     opacity: 0.1;
 }
 
-.map {
-    position: relative;
-}
-
-.social-item {
-    display: flex;
-    justify-content: space-between;
-    width: 260px;
-    margin: 0;
-    margin-right: 140px;
-    padding: 0;
-}
-
-.footer-contacts {
-    position: absolute;
-    bottom: 60px;
-    left: 140px;
-    width: 210px;
-    padding: 50px;
-
-    background-color: #ffffff;
-}
-
-.footer-contacts p {
-    margin: 0;
-    padding: 0;
-}
-
-.footer-contacts .studio-name {
-    margin-bottom: 25px;
-}
-
-.footer-contacts .studio-address {
-    margin-bottom: 15px;
-}
-
-.footer-contacts .studio-phone {
-    margin-bottom: 35px;
-}
-
-.footer-contacts .studio-address,
-.footer-contacts .studio-phone {
-    font-size: 16px;
-    line-height: 18px;
-    color: #666666;
-}
-
-.footer-contacts p:nth-child(2){
-    font-weight: 700;
-    color: black;
-
-    text-transform: uppercase;
-}
-
-.footer-social {
-    display: flex;
-    margin-top: 70px;
-    margin-bottom: 70px;
-
-}
-
-.footer-social b{
-    font-size: 36px;
-    line-height: 36px;
-    font-weight: 700;
-    color: black;
-}
-
-.footer-social .social-button {
-    font: inherit;
-    color: black;
-}
-
-.footer-social a {
-    color: black;
-    background-color: #e1e1e1;
-}
-
-.modal {
-    margin: 0 240px 50px;
-    padding: 60px 100px 85px 100px;
-    width: 760px;
-
-    background-color: #ffffff;
-    box-shadow: 0 20px 45px rgba(0,0,0,0.6);;
-}
-
-.modal h2 {
-    margin: 0 0 45px;
-    padding: 0;
-    font-size: 40px;
-    line-height: 40px;
-    font-weight: 700;
-    color: #000000;
-}
-
-.modal form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.letter-form textarea {
-    font-family: "Roboto", "Verdana", sans-serif;
-    box-sizing: border-box;
-}
-
-.letter-form input,
-.letter-form textarea {
-    margin-bottom: 35px;
-    padding: 13px;
-    background-color: transparent;
-    border: 2px solid #e4e8e9;
-    border-radius: 3px;
-    outline: none;
-}
-
-.letter-form input:hover,
-.letter-form textarea:hover {
-    border-color: #cdd0d2;
-    outline: none;
-}
-
-.letter-form input:focus,
-.letter-form textarea:focus {
-    border-color: #000000;
-    outline: none;
-}
-
-.letter-form p {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-}
-
-.letter-form label {
-     margin-bottom: 10px;
-     line-height: 18px;
-     font-weight: 700;
-     color: black;
- }
-
-.name-icon-user,
-.email-icon-user {
-    width: 334px;
-    height: 36px;
-}
-
-form .letter-icon-user {
-    margin-bottom: 45px;
-    width: 760px;
-    min-height: 120px;
-}
-
-input[type='text'],
-textarea {
-    font-family: "Roboto", "Verdana", sans-serif;
-    font-size: 16px;
-    line-height: 18px;
-}
-
-.letter-form .button {
-    padding: 15px 80px;
-}
 
 .invalid {
     border-color: #e74246;
@@ -900,6 +767,7 @@ textarea {
     margin-top: 0;
     margin-bottom: 80px;
     padding-top: 45px;
+    padding-left: 0;
     padding-bottom: 45px;
     background-image: url("../img/divide.png"),
                       url("../img/divide.png");
@@ -1048,3 +916,232 @@ textarea {
     background: none;
 }
 
+.map {
+    position: relative;
+}
+
+.social-item {
+    display: flex;
+    justify-content: space-between;
+    width: 260px;
+    margin: 0;
+    margin-right: 140px;
+    padding: 0;
+}
+
+.footer-contacts {
+    position: absolute;
+    bottom: 60px;
+    left: 140px;
+    width: 210px;
+    padding: 50px;
+
+    background-color: #ffffff;
+}
+
+.footer-contacts p {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-contacts .studio-name {
+    margin-bottom: 25px;
+}
+
+.footer-contacts .studio-address {
+    margin-bottom: 15px;
+}
+
+.footer-contacts .studio-phone {
+    margin-bottom: 35px;
+}
+
+.footer-contacts .studio-address,
+.footer-contacts .studio-phone {
+    font-size: 16px;
+    line-height: 18px;
+    color: #666666;
+}
+
+.footer-contacts p:nth-child(2){
+    font-weight: 700;
+    color: black;
+
+    text-transform: uppercase;
+}
+
+.footer-social {
+    display: flex;
+    margin-top: 70px;
+    margin-bottom: 70px;
+
+}
+
+.footer-social b{
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+    color: black;
+}
+
+.footer-social .social-button {
+    font: inherit;
+    color: black;
+}
+
+.footer-social a {
+    color: black;
+    background-color: #e1e1e1;
+}
+
+.modal {
+    position: fixed;
+
+    display: none;
+
+    top: 50%;
+    left: 50%;
+    margin-left: -480px;
+    margin-top: -300px;
+    padding: 60px 100px 85px 100px;
+    width: 760px;
+    border: 1px solid greenyellow;
+
+    background-color: #ffffff;
+    background-position: 0 0;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+
+    z-index: 2;
+}
+
+.modal-overlay {
+    position: fixed;
+
+    display: none;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    z-index: 1;
+}
+
+.modal-close {
+    position: absolute;
+    top: 80px;
+    right: 90px;
+    width: 21px;
+    height: 21px;
+
+    font-size: 0;
+
+    background-color: #ffffff;
+    border: 0;
+
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.modal-close::before,
+.modal-close::after {
+    content: "";
+
+    position: absolute;
+    top: 9px;
+    left: 1px;
+
+    width: 19px;
+    height: 3px;
+
+    background-color: #fb565a;
+}
+
+.modal-close::before {
+    transform: rotate(45deg);
+}
+
+.modal-close::after {
+    transform: rotate(-45deg);
+}
+
+.modal h2 {
+    margin: 0 0 45px;
+    padding: 0;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.modal form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.letter-form textarea {
+    font-family: "Roboto", "Verdana", sans-serif;
+    box-sizing: border-box;
+}
+
+.letter-form input,
+.letter-form textarea {
+    margin-bottom: 35px;
+    padding: 13px;
+    background-color: transparent;
+    border: 2px solid #e4e8e9;
+    border-radius: 3px;
+    outline: none;
+}
+
+.letter-form input:hover,
+.letter-form textarea:hover {
+    border-color: #cdd0d2;
+    outline: none;
+}
+
+.letter-form input:focus,
+.letter-form textarea:focus {
+    border-color: #000000;
+    outline: none;
+}
+
+.letter-form p {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.letter-form label {
+    margin-bottom: 10px;
+    line-height: 18px;
+    font-weight: 700;
+    color: black;
+}
+
+.name-icon-user,
+.email-icon-user {
+    width: 334px;
+    height: 36px;
+}
+
+form .letter-icon-user {
+    margin-bottom: 45px;
+    width: 760px;
+    min-height: 120px;
+}
+
+input[type='text'],
+textarea {
+    font-family: "Roboto", "Verdana", sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.letter-form .button {
+    padding: 15px 80px;
+}
