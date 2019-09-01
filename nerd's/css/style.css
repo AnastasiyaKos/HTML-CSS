@@ -426,6 +426,7 @@ input:checked + .checkbox::before {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    flex-wrap: wrap;
     font-size: 16px;
     line-height: 30px;
     color: #000000;
@@ -467,11 +468,23 @@ input:checked + .checkbox::before {
 .basket a:focus{
     color: #000000;
 
-    text-decoration: underline;
 }
 
-.site-navigation-current a {
-    text-decoration: underline;
+.site-navigation-current {
+    position: relative;
+}
+
+.site-navigation-current::after {
+    content: "";
+
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+
+    height: 2px;
+
+    background-color: #fb565a;
 }
 
 .basket .basket-link {
@@ -1005,7 +1018,6 @@ input:checked + .checkbox::before {
     margin-top: -300px;
     padding: 60px 100px 85px 100px;
     width: 760px;
-    border: 1px solid greenyellow;
 
     background-color: #ffffff;
     background-position: 0 0;
@@ -1024,9 +1036,13 @@ input:checked + .checkbox::before {
     width: 100%;
     height: 100%;
 
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
 
     z-index: 1;
+}
+
+.modal-show {
+    display: block;
 }
 
 .modal-close {
