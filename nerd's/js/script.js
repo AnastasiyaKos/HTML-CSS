@@ -12,7 +12,7 @@ let isStorageSupport = true;
 let storage = '';
 
 try {
-    storage = localStorage.getItem('');
+    storage = localStorage.getItem('userName');
 } catch (err) {
     isStorageSupport = false;
 }
@@ -22,7 +22,11 @@ openLetter.addEventListener('click', (e) => {
     console.log(letter);
     letter.classList.add('modal-show');
     modalOverlay.classList.add('modal-show');
-    userName.focus();
+    if (storage) {
+        userName.value = storage;
+    } else  {
+        userName.focus();
+    }
 });
 
 closeLetter.addEventListener('click', (e) => {
@@ -38,10 +42,15 @@ modalOverlay.addEventListener('click', (e) => {
     modalOverlay.classList.remove('modal-show');
 });
 
+
+
 form.addEventListener('submit', (e) => {
     if (!userName.value || !userEmail.value || !userLetter.value) {
         e.preventDefault();
-        console.log('Enter date')
+        alert('Введите данные');
+    } else {
+        if (isStorageSupport) {
+            localStorage.setItem("userName", userName.value);
+        }
     }
-
 });
