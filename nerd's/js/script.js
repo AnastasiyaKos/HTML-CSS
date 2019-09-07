@@ -24,6 +24,7 @@ openLetter.addEventListener('click', (e) => {
     modalOverlay.classList.add('modal-show');
     if (storage) {
         userName.value = storage;
+        userEmail.focus();
     } else  {
         userName.focus();
     }
@@ -42,8 +43,6 @@ modalOverlay.addEventListener('click', (e) => {
     modalOverlay.classList.remove('modal-show');
 });
 
-
-
 form.addEventListener('submit', (e) => {
     if (!userName.value || !userEmail.value || !userLetter.value) {
         e.preventDefault();
@@ -51,6 +50,17 @@ form.addEventListener('submit', (e) => {
     } else {
         if (isStorageSupport) {
             localStorage.setItem("userName", userName.value);
+        }
+    }
+});
+
+window.addEventListener('keydown', (evt) => {
+    if (evt.keyCode === 27) {
+        evt.preventDefault();
+
+        if (letter.classList.contains('modal-show')) {
+            letter.classList.remove('modal-show');
+            modalOverlay.classList.remove('modal-show');
         }
     }
 });
