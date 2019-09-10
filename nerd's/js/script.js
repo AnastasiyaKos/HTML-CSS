@@ -21,11 +21,11 @@ openLetter.addEventListener('click', (e) => {
     e.preventDefault();
     console.log(letter);
     letter.classList.add('modal-show');
-    modalOverlay.classList.add('modal-show');
+    modalOverlay.classList.add('modal-overlay-show');
     if (storage) {
         userName.value = storage;
         userEmail.focus();
-    } else  {
+    } else {
         userName.focus();
     }
 });
@@ -33,20 +33,21 @@ openLetter.addEventListener('click', (e) => {
 closeLetter.addEventListener('click', (e) => {
     e.preventDefault();
     letter.classList.remove('modal-show');
-    modalOverlay.classList.remove('modal-show');
+    letter.classList.remove('modal-error');
+    modalOverlay.classList.remove('modal-overlay-show');
 });
 
 
 modalOverlay.addEventListener('click', (e) => {
     e.preventDefault();
     letter.classList.remove('modal-show');
-    modalOverlay.classList.remove('modal-show');
+    modalOverlay.classList.remove('modal-overlay-show');
 });
 
 form.addEventListener('submit', (e) => {
     if (!userName.value || !userEmail.value || !userLetter.value) {
-        e.preventDefault();
-        alert('Введите данные');
+         // alert('Введите данные');
+        letter.classList.add('modal-error');
     } else {
         if (isStorageSupport) {
             localStorage.setItem("userName", userName.value);
@@ -56,11 +57,10 @@ form.addEventListener('submit', (e) => {
 
 window.addEventListener('keydown', (evt) => {
     if (evt.keyCode === 27) {
-        evt.preventDefault();
-
         if (letter.classList.contains('modal-show')) {
+            evt.preventDefault();
             letter.classList.remove('modal-show');
-            modalOverlay.classList.remove('modal-show');
+            modalOverlay.classList.remove('modal-overlay-show');
         }
     }
 });
