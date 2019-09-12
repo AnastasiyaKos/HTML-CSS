@@ -8,6 +8,10 @@ let userName = letter.querySelector('[name=name]');
 let userEmail = letter.querySelector('[name=email]');
 let userLetter = letter.querySelector('.letter-icon-user');
 
+// let products = document.querySelectorAll('.catalog-item');
+// let templateInformation = document.querySelectorAll('.item-info');
+
+
 let isStorageSupport = true;
 let storage = '';
 
@@ -64,3 +68,22 @@ window.addEventListener('keydown', (evt) => {
         }
     }
 });
+
+
+// for ( let i = 0; i < products.length; i++) {
+//     products[i].onmouseover = showProductsInfo;
+// }
+//
+// function showProductsInfo(e) {
+//
+// }
+
+// templateInformation.classList.remove('item-info');
+// templateInformation.classList.add('item-info-show');
+
+
+
+
+
+
+
