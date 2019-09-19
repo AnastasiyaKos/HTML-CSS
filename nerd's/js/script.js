@@ -8,9 +8,6 @@ let userName = letter.querySelector('[name=name]');
 let userEmail = letter.querySelector('[name=email]');
 let userLetter = letter.querySelector('.letter-icon-user');
 
-// let products = document.querySelectorAll('.catalog-item');
-// let templateInformation = document.querySelectorAll('.item-info');
-
 
 let isStorageSupport = true;
 let storage = '';
@@ -69,17 +66,22 @@ window.addEventListener('keydown', (evt) => {
     }
 });
 
+let products = document.querySelectorAll('.catalog-item');
 
-// for ( let i = 0; i < products.length; i++) {
-//     products[i].onmouseover = showProductsInfo;
-// }
-//
-// function showProductsInfo(e) {
-//
-// }
+for ( let i = 0; i < products.length; i++) {
+    products[i].onmouseover = (e) => {
+        products[i].childNodes[3].classList.remove('item-info');
+        products[i].childNodes[3].classList.add('item-info-show');
+    }
+};
 
-// templateInformation.classList.remove('item-info');
-// templateInformation.classList.add('item-info-show');
+for ( let i = 0; i < products.length; i++) {
+    products[i].onmouseout = (e) => {
+        products[i].childNodes[3].classList.remove('item-info-show');
+        products[i].childNodes[3].classList.add('item-info');
+    }
+};
+
 
 
 

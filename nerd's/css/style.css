@@ -869,8 +869,38 @@ input:checked + .checkbox::before {
     opacity: 1;
 }
 
+
+
 .item-info {
-    visibility: visible;
+    display: none;
+    width: 360px;
+    height: 231px;
+    text-align: center;
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+
+
+
+    background-color: #eee;
+}
+
+@keyframes appearance  {
+    0% {
+        transform: translateY(231px);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.item-info-show {
+    animation-name: appearance;
+    animation-duration: 0.5s;
+
+    display: block;
     width: 360px;
     height: 231px;
     text-align: center;
@@ -879,10 +909,6 @@ input:checked + .checkbox::before {
     left: 0;
 
     background-color: #eee;
-}
-
-.item-info-show {
-    visibility: visible;
 }
 
 .item-info h3 {
